@@ -3,8 +3,8 @@ $(function() {
         event.preventDefault();
 
         var newBurger = {
-            name: $("#burger").val().trim(),
-            devoured: false
+            burger_name: $("#burger").val().trim(),
+            devoured: 0
         };
         $.ajax("api/burgers", {
             type: "POST",
@@ -15,4 +15,20 @@ $(function() {
             location.reload();
         })
     });
+
+    $(".devour").on("click", function(event) {
+        var id = $(this).data("id");
+    
+        var devChange = {
+            devoured: true
+        };
+    
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: devChange
+        }).then(function() {
+            location.reload();
+        })
+    })
 });
+

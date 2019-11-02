@@ -2,3 +2,33 @@ body {
     background: orange;
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.available,
+.devouredCol {
+    background: sandybrown;
+    border-radius: 4px;
+}
+
+.btn {
+    margin-left: 10px;
+}
+
+
+
